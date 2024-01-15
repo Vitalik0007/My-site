@@ -1,18 +1,151 @@
 <html>
 	<head>
-		<title>My portfolio </title>
+		<title>My portfolio</title>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="icon" href="image/pick.ico" type="image/x-icon">
     </head>
 	<body>
-		<div class = "blur">
-		    <p>HI</p>
-			<h2>My name is Vitalii. Look at my portfolio</h2>
-			<a href="main.html">
-				<div class = "koko">
-					<img src="image/down.png" class="down" width="70px" height="70px">
+	    <div>
+			<div class="box1">
+			    <nav>
+				    <ul>
+					    <li><a href="javascript://0" onclick="slowScroll ('#lol1')">About me</a></li>
+						<li><a href="javascript://0" onclick="slowScroll ('#lol2')">Education</a></li>
+						<li><a href="javascript://0" onclick="slowScroll ('#lol3')">Skills</a></li>
+						<li><a href="javascript://0" onclick="slowScroll ('#lol4')">Projects</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="box2" id = "lol1">
+				<p class="pp1">Hi! My name is Vitalii Yavorskyi. I recently graduated from the University of Lodz with a degree in Computer Graphics and Game Development. I like to create funny games
+                    and solves interesting tasks. I want to realize my passion, skills, and practical experience as a Junior Unity Developer by contributing to the
+				    dynamic field of game development.</p>
+				<img src="image/fot.jpg" class="pick">
+			</div>
+			<div class="box3" id="lol2">
+				<h2 class="block-title">Education</h2>
+			
+				<div class="project-divider"></div>
+
+				<div class="diploma-container">
+					<div class="diploma-item">
+						<img src="image/uni.png" class="pick1">
+					</div>
 				</div>
-			</a>
-		</div>
+
+				<div class="education-container">
+					<div class="education-item">
+						<img src="image/course1.jpg" class="course-image">
+					</div>
+					<div class="education-item">
+						<img src="image/course2.jpg" class="course-image">
+					</div>
+				</div>
+				
+			</div>
+			<div class="box4" id = "lol3">
+				<h2 class="block-title">Skills</h2>
+
+				<div class="project-divider"></div>
+
+				<div>
+					<img src="image/html.png" class="pick21">
+					<img src="image/c.png" class="pick22">
+				</div>
+				<img src="image/logo.png" class="pick2">
+				<div>
+					<img src="image/phot.png" class="pick23">
+					<img src="image/unity.png" class="pick24">
+				</div>
+			</div>
+			<div class="box5" id="lol4">
+				<h2 class="block-title">My projects</h2>
+
+				<div class="project-divider"></div>
+
+				<div class="project-container">
+					<div class="project-item">
+						<a href="https://play.google.com/store/apps/details?id=com.HotCrystal.DespotDrain" target="_blank">
+							<img src="image/putin.jpg" class="project-image" title="Click">
+						</a>
+					</div>
+					<div class="project-item">
+						<div class="project-description">
+							<div class="section">
+								<h3>Despot Drain: Kick the Di</h3>
+								<p>Unleash your inner revolutionary in this addictive and comical mobile game. 
+									Use your skills to overcome tyranny and free the world from evil. 
+									Get ready for a fun adventure as you traverse treacherous terrain, 
+									drawing a variety of paths to throw the insatiable dictators down the hole!</p>
+							</div>
+						
+							<div class="section">
+								<h3>Genre</h3>
+								<p>puzzles, casual</p>
+							</div>
+						
+							<div class="section">
+								<h3>Main Tasks</h3>
+								<p>Main tasks and accomplishments in this project...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="project-divider"></div>
+			
+				<div class="project-container">
+					<div class="project-item">
+						<a href="https://github.com/Vitalik0007/Dyploma_Project" target="_blank">
+							<img src="image/dyplom.png" class="project-image" title="Click">
+						</a>
+					</div>
+					<div class="project-item">
+						<div class="project-description">
+							<div class="section">
+								<h3>Anti-corona - Dyploma Project</h3>
+								<p>The whole world is still feeling the effects of the COVID-19 pandemic. 
+									Human health and improved medical systems have become a priority for society. 
+									This was the reason for developing my thesis project - "2D mobile game made in Unity environment".
+									For several years I have been interested in developing mobile games on Unity. 
+									I wanted to use my experience and skills to create something really interesting, fun and at the same time educational. 
+									I believe that an immersive game can be a great educational tool to capture the attention of players.</p>
+							</div>
+						
+							<div class="section">
+								<h3>Genre</h3>
+								<p>tower defense</p>
+							</div>
+						
+							<div class="section">
+								<h3>Main Tasks</h3>
+								<p>Main tasks and accomplishments in this project...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box6">
+				<p class="ttt">My social media</p>
+				<div class="project-divider"></div>
+				<a href="https://play.google.com/store/apps/dev?id=5229329348808599972" target="_blank"><img src="image/gp.png" class="socials"></a>
+				<a href="https://www.facebook.com/vitalik0007" target="_blank"><img src="image/face.png" class="socials"></a>
+				<a href="https://github.com/Vitalik0007" target="_blank"><img src="image/git.png" class="socials"></a>
+				<a href="https://www.linkedin.com/in/vitalii-yavorskyi-740758180/" target="_blank"><img src="image/linkdn.png" class="socials"></a>
+			</div>
+			<div class="box7">
+				<p>Made by Vitalii Yavorskyi</p> 
+			</div>
+        </div>
+		<script src="javascript/jquery-3.1.0.min.js" charset="utf-8"></script>
+        <script>
+        function slowScroll (id) {
+        var offset = 50;
+        $('html, body').animate ({
+          scrollTop: $(id).offset ().top - offset
+        }, 500);
+        return false;
+        }
+        </script>
 	</body>
 </html>
