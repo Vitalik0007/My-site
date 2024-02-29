@@ -277,10 +277,6 @@ ul li a:hover
     border: 3px solid transparent;
 }
 
-.project-image:hover {
-    border: 3px solid #000000;
-}
-
 .project-description {
     text-align: justify;
     padding-right: 50px;
