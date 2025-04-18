@@ -1,198 +1,194 @@
-<html>
-	<head>
-		<title>My portfolio</title>
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="icon" href="image/pick.ico" type="image/x-icon">
-    </head>
-	<body>
-	    <div>
-			<div class="box1">
-			    <nav>
-				    <ul>
-					    <li><a href="javascript://0" onclick="slowScroll ('#lol1')">About me</a></li>
-						<li><a href="javascript://0" onclick="slowScroll ('#lol2')">Education</a></li>
-						<li><a href="javascript://0" onclick="slowScroll ('#lol3')">Skills</a></li>
-						<li><a href="javascript://0" onclick="slowScroll ('#lol4')">Projects</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="box2" id = "lol1">
-				<p class="pp1">Hi! My name is Vitalii Yavorskyi. I recently graduated from the University of Lodz with a degree in Computer Graphics and Game Development. I like to create funny games
-                    and solves interesting tasks. I want to realize my passion, skills, and practical experience as a Junior Unity Developer by contributing to the
-				    dynamic field of game development.</p>
-				<img src="image/fot.jpg" class="pick">
-			</div>
-			<div class="box3" id="lol2">
-				<h2 class="block-title">Education</h2>
-			
-				<div class="project-divider"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Portfolio - Vitalii Yavorskyi</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="image/pick.ico" type="image/x-icon">
+</head>
+<body>
+	<div class="wrapper">
 
-				<div class="diploma-container">
-					<div class="diploma-item">
-						<img src="image/uni.png" class="pick1">
-					</div>
+		<!-- Navigation -->
+		<header class="header">
+			<nav class="nav">
+				<ul class="nav-list">
+					<li><a href="#about" onclick="slowScroll('#about')">About Me</a></li>
+					<li><a href="#projects" onclick="slowScroll('#projects')">Projects</a></li>
+					<li><a href="#contacts" onclick="slowScroll('#contacts')">Contacts</a></li>
+				</ul>
+			</nav>
+			<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+		</header>
+
+		<!-- About Me Section -->
+		<section class="about-section" id="about">
+			<div class="about-container">
+
+			  <div class="photo-wrapper">
+				<img src="image/MyFoto.jpeg" alt="My Photo" class="circle-photo">
+			  </div>
+		  
+			  <div class="text-wrapper">
+				<h1 class="name">VITALII YAVORSKYI</h1>
+				<p class="about-text">
+				  I develop games for various platforms and specialize in implementing game mechanics and code optimization.
+				</p>
+			  </div>
+		  
+			  <div class="game-info">
+				<video class="game-video" autoplay muted loop playsinline>
+					<source src="image/WorkExample2.webm" type="video/mp4">
+					Your browser does not support the video tag.
+				  </video>
+				<div class="game-description">
+					<p class="game-title">My latest work</p>
+					<a href="https://github.com/Vitalik0007/KidsProject" class="code-button">View Code</a>
 				</div>
-
-				<div class="education-container">
-					<div class="education-item">
-						<img src="image/course1.jpg" class="course-image">
-					</div>
-					<div class="education-item">
-						<img src="image/course2.jpg" class="course-image">
-					</div>
-				</div>
-				
+			  </div>
 			</div>
-			<div class="box4" id = "lol3">
-				<h2 class="block-title">Skills</h2>
+		  </section>
 
-				<div class="project-divider"></div>
+		<!-- Projects Section -->
+		<section class="projects-section" id="projects">
+			<h2 class="section-title">My Projects</h2>
+			<div class="divider"></div>
 
-				<div>
-					<img src="image/html.png" class="pick21">
-					<img src="image/c.png" class="pick22">
+			<div class="project-container">
+				<div class="project-item">
+					<img src="image/putin.jpg" class="project-image" title="Click">
 				</div>
-				<img src="image/logo.png" class="pick2">
-				<div>
-					<img src="image/phot.png" class="pick23">
-					<img src="image/unity.png" class="pick24">
-				</div>
-			</div>
-			<div class="box5" id="lol4">
-				<h2 class="block-title">My projects</h2>
-
-				<div class="project-divider"></div>
-
-				<div class="project-container">
-					<div class="project-item">
-						<img src="image/putin.jpg" class="project-image" title="Click">
-					</div>
-					<div class="project-item">
-						<div class="project-description">
-							<div class="section">
-								<h3>Despot Drain: Kick the Di</h3>
-								<p>Unleash your inner revolutionary in this addictive and comical mobile game. 
-									Use your skills to overcome tyranny and free the world from evil. 
-									Get ready for a fun adventure as you traverse treacherous terrain, 
-									drawing a variety of paths to throw the insatiable dictators down the hole!</p>
-							</div>
-						
-							<div class="section">
-								<h3>Genre</h3>
-								<p>puzzles, casual</p>
-							</div>
-						
-							<div class="section">
-								<h3>Main Tasks</h3>
-								<p>Full development cycle: working on saves system, tips system, UI: Game & Menus, services integration: Admob.</p>
-							</div>
-
-							<div class="section">
-								<h3>Link</h3>
-								<a href="https://play.google.com/store/apps/details?id=com.HotCrystal.DespotDrain" target="_blank">
-									<p>Google Play</p>
-								</a>
-							</div>
+				<div class="project-item">
+					<div class="project-description">
+						<div class="section">
+							<h3>Despot Drain: Kick the Di</h3>
+							<p>Unleash your inner revolutionary in this addictive and comical mobile game. 
+								Use your skills to overcome tyranny and free the world from evil. 
+								Get ready for a fun adventure as you traverse treacherous terrain, 
+								drawing a variety of paths to throw the insatiable dictators down the hole!</p>
 						</div>
-					</div>
-				</div>
-			
-				<div class="project-divider"></div>
-			
-				<div class="project-container">
-					<div class="project-item">
-						<img src="image/dyplom.png" class="project-image" title="Click">
-					</div>
-					<div class="project-item">
-						<div class="project-description">
-							<div class="section">
-								<h3>Anti-corona - Dyploma Project</h3>
-								<p>The whole world is still feeling the effects of the COVID-19 pandemic. 
-									Human health and improved medical systems have become a priority for society. 
-									This was the reason for developing my thesis project - "2D mobile game made in Unity environment".
-									For several years I have been interested in developing mobile games on Unity. 
-									I wanted to use my experience and skills to create something really interesting, fun and at the same time educational. 
-									I believe that an immersive game can be a great educational tool to capture the attention of players.</p>
-							</div>
-						
-							<div class="section">
-								<h3>Genre</h3>
-								<p>tower defense</p>
-							</div>
-						
-							<div class="section">
-								<h3>Main Tasks</h3>
-								<p>Full development cycle: saves system, particles & effects, level manager, 
-									wave spawning system, tower improvement system, variety of enemies</p>
-							</div>
-
-							<div class="section">
-								<h3>Link</h3>
-								<a href="https://github.com/Vitalik0007/Dyploma_Project" target="_blank">
-									<p>GitHub</p>
-								</a>
-							</div>
+					
+						<div class="section">
+							<h3>Genre</h3>
+							<p>puzzles, casual</p>
 						</div>
-					</div>
-				</div>
+					
+						<div class="section">
+							<h3>Main Tasks</h3>
+							<p>Full development cycle: working on saves system, tips system, UI: Game & Menus, services integration: Admob.</p>
+						</div>
 
-				<div class="project-divider"></div>
-			
-				<div class="project-container">
-					<div class="project-item">
-						<img src="image/naninovel.png" class="project-image" title="Click">
-					</div>
-					<div class="project-item">
-						<div class="project-description">
-							<div class="section">
-								<h3>Naninovel Test Project</h3>
-								<p>The project is a visual novel in the cyberpunk style, created using the naninovel package for Unity. 
-									Players embark on an immersive cybernetic adventure where every decision affects the storyline</p>
-							</div>
-						
-							<div class="section">
-								<h3>Genre</h3>
-								<p>visual novel</p>
-							</div>
-						
-							<div class="section">
-								<h3>Main Tasks</h3>
-								<p>Developed a custom Naninovel service using asynchronous programming to manage the mini-game within the project,
-							       utilized the Table-based Localization add-on to localize the game into an additional language, 
-								   designed and implemented the game's UI using a supplementary UI asset according to personal preferences and style.</p>
-							</div>
-
-							<div class="section">
-								<h3>Link</h3>
-								<a href="https://github.com/Vitalik0007/NaninovelUnity" target="_blank">
-									<p>GitHub</p>
-								</a>
-							</div>
+						<div class="section">
+							<h3>Link</h3>
+							<a href="https://play.google.com/store/apps/details?id=com.HotCrystal.DespotDrain" target="_blank">
+								<p>Google Play</p>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="box6">
-				<p class="ttt">My social media</p>
-				<div class="project-divider"></div>
-				<a href="https://play.google.com/store/apps/dev?id=5229329348808599972" target="_blank"><img src="image/gp.png" class="socials"></a>
-				<a href="https://www.facebook.com/vitalik0007" target="_blank"><img src="image/face.png" class="socials"></a>
-				<a href="https://github.com/Vitalik0007" target="_blank"><img src="image/git.png" class="socials"></a>
-				<a href="https://www.linkedin.com/in/vitalii-yavorskyi-740758180/" target="_blank"><img src="image/linkdn.png" class="socials"></a>
+		
+			<div class="divider"></div>
+		
+			<div class="project-container">
+				<div class="project-item">
+					<img src="image/dyplom.png" class="project-image" title="Click">
+				</div>
+				<div class="project-item">
+					<div class="project-description">
+						<div class="section">
+							<h3>Anti-corona - Dyploma Project</h3>
+							<p>The whole world is still feeling the effects of the COVID-19 pandemic. 
+								Human health and improved medical systems have become a priority for society. 
+								This was the reason for developing my thesis project - "2D mobile game made in Unity environment".
+								For several years I have been interested in developing mobile games on Unity. 
+								I wanted to use my experience and skills to create something really interesting, fun and at the same time educational. 
+								I believe that an immersive game can be a great educational tool to capture the attention of players.</p>
+						</div>
+					
+						<div class="section">
+							<h3>Genre</h3>
+							<p>tower defense</p>
+						</div>
+					
+						<div class="section">
+							<h3>Main Tasks</h3>
+							<p>Full development cycle: saves system, particles & effects, level manager, 
+								wave spawning system, tower improvement system, variety of enemies</p>
+						</div>
+
+						<div class="section">
+							<h3>Link</h3>
+							<a href="https://github.com/Vitalik0007/Dyploma_Project" target="_blank">
+								<p>GitHub</p>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="box7">
-				<p>Made by Vitalii Yavorskyi</p> 
+
+			<div class="divider"></div>
+		
+			<div class="project-container">
+				<div class="project-item">
+					<img src="image/naninovel.png" class="project-image" title="Click">
+				</div>
+				<div class="project-item">
+					<div class="project-description">
+						<div class="section">
+							<h3>Naninovel Test Project</h3>
+							<p>The project is a visual novel in the cyberpunk style, created using the naninovel package for Unity. 
+								Players embark on an immersive cybernetic adventure where every decision affects the storyline</p>
+						</div>
+					
+						<div class="section">
+							<h3>Genre</h3>
+							<p>visual novel</p>
+						</div>
+					
+						<div class="section">
+							<h3>Main Tasks</h3>
+							<p>Developed a custom Naninovel service using asynchronous programming to manage the mini-game within the project,
+							   utilized the Table-based Localization add-on to localize the game into an additional language, 
+							   designed and implemented the game's UI using a supplementary UI asset according to personal preferences and style.</p>
+						</div>
+
+						<div class="section">
+							<h3>Link</h3>
+							<a href="https://github.com/Vitalik0007/NaninovelUnity" target="_blank">
+								<p>GitHub</p>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-        </div>
-		<script src="javascript/jquery-3.1.0.min.js" charset="utf-8"></script>
-        <script>
-        function slowScroll (id) {
-        var offset = 50;
-        $('html, body').animate ({
-          scrollTop: $(id).offset ().top - offset
-        }, 500);
-        return false;
-        }
-        </script>
-	</body>
+		</section>
+
+		<!-- Social Media -->
+		<footer class="footer" id="contacts">
+			<h3 class="social-title">My Social Media</h3>
+			<div class="divider"></div>
+			<div class="social-links">
+				<a href="https://play.google.com/store/apps/dev?id=5229329348808599972" target="_blank"><img src="image/gp.png" alt="Google Play" class="social-icon"></a>
+				<a href="https://www.facebook.com/vitalik0007" target="_blank"><img src="image/face.png" alt="Facebook" class="social-icon"></a>
+				<a href="https://github.com/Vitalik0007" target="_blank"><img src="image/git.png" alt="GitHub" class="social-icon"></a>
+				<a href="https://www.linkedin.com/in/vitalii-yavorskyi-740758180/" target="_blank"><img src="image/linkdn.png" alt="LinkedIn" class="social-icon"></a>
+			</div>
+			<p class="footer-text">Made by Vitalii Yavorskyi</p>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="javascript/jquery-3.1.0.min.js" charset="utf-8"></script>
+	<script>
+		function slowScroll(id) {
+			const offset = 50;
+			$('html, body').animate({
+				scrollTop: $(id).offset().top - offset
+			}, 500);
+			return false;
+		}
+	</script>
+</body>
 </html>
