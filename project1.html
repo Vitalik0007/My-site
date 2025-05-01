@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Project Title</title>
+	<link rel="stylesheet" href="css/project.css" />
+    <link rel="icon" href="image/pick.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="project-content">
+        <header class="project-header">
+            <h1>KIDS PROJECT</h1>
+            <a href="index.html" class="back-button">Home</a>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        </header>
+
+        <section class="project-gallery">
+            <div class="slider">
+                <img src="image/kidsGame.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/kidsGame2.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/kidsGame3.jpg" alt="Screenshot 3" class="slide">
+                <img src="image/kidsGame4.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/kidsGame5.jpg" alt="Screenshot 3" class="slide">
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>About the Game</h2>
+                    <p>The game is designed specifically for young children and aims to support early cognitive development through fun and interactive activities. 
+                        It features a collection of carefully crafted mini-games that focus on essential skills such as color recognition, shape matching, memory, and logical thinking.</p>
+                </div>
+                <div class="image"><img src="image/kidsGame2.jpg" alt="Game shot"></div>
+            </div>
+
+            <div class="project-section reverse">
+                <div class="text">
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>Unity (C#) – Core game development engine</li>
+                        <li>ScriptableObjects – Modular data architecture for mini-game configuration</li>
+                        <li>DOTween – Smooth UI and gameplay animations</li>
+                        <li>Spine Unity Runtime – Integration of animated character hints and elements</li>
+                        <li>Unity UI (UGUI) – Responsive user interface layout and interaction</li>
+                    </ul>
+                </div>
+                <div class="image"><img src="image/kidsGame3.jpg" alt="Game tech"></div>
+            </div>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>My Role</h2>
+                    <p>As the sole Unity developer on this project, I was responsible for implementing the full gameplay logic, building multiple mini-games from scratch, 
+                        creating a flexible and reusable game architecture using ScriptableObjects, integrating UI animations with DOTween, and supporting animated hints using Spine. 
+                        I collaborated with the game artist to ensure smooth user experience and age-appropriate interactions for young children.</p>
+                </div>
+                <div class="image"><img src="image/kidsGame4.jpg" alt="Game dev"></div>
+            </div>
+
+        <div class="project-link">
+            <a href="https://github.com/Vitalik0007/KidsProject" target="_blank">See the Game</a>
+        </div>
+    </section>
+
+	<script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000);
+    
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

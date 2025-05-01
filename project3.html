@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Project Title</title>
+	<link rel="stylesheet" href="css/project.css" />
+    <link rel="icon" href="image/pick.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="project-content">
+        <header class="project-header">
+            <h1>DESPOT DRAIN: KICK THE DI</h1>
+            <a href="index.html" class="back-button">Home</a>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        </header>
+
+        <section class="project-gallery">
+            <div class="slider">
+                <img src="image/DespotDrain.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/DespotDrain2.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/DespotDrain3.jpg" alt="Screenshot 3" class="slide">
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>About the Game</h2>
+                    <p>Join the rebellion! Outsmart the dictators in Despot Drain. It's time to flush out tyranny and restore freedom in this fun, addictive adventure. 
+                        Ready to make a splash? Try it now to save the world and become the hero your nation needs!</p>
+                </div>
+                <div class="image"><img src="image/DespotDrain.jpg" alt="Game shot"></div>
+            </div>
+
+            <div class="project-section reverse">
+                <div class="text">
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>Unity – Main game engine used for development</li>
+                        <li>C# - Primary programming language used for scripting the game's logic and mechanics.</li>
+                        <li>Google Ads SDK – Integrated for rewarded and interstitial ads</li>
+                        <li>Leonardo.AI & Adobe Photoshop – Used for generating and refining game artwork</li>
+                        <li>Unity UI System – Custom interface for drawing mechanics and level flow</li>
+                        <li>Custom Drawing System – Player-drawn paths implementation for fluid dynamics</li>
+                    </ul>
+                </div>
+                <div class="image"><img src="image/DespotDrain2.jpg" alt="Game tech"></div>
+            </div>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>My Role</h2>
+                    <p>I was responsible for the full development cycle: gameplay logic, custom path-drawing mechanics, animations, UI/UX design, 
+                        artwork generation using Leonardo.AI and Photoshop, bug fixing, ad integration with Admob SDK, and deployment to Android.</p>
+                </div>
+                <div class="image"><img src="image/DespotDrain3.jpg" alt="Game dev"></div>
+            </div>
+
+        <div class="project-link">
+            <a href="https://play.google.com/store/apps/details?id=com.HotCrystal.DespotDrain" target="_blank">See the Game</a>
+        </div>
+    </section>
+
+	<script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000);
+    
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

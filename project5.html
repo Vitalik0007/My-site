@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Project Title</title>
+	<link rel="stylesheet" href="css/project.css" />
+    <link rel="icon" href="image/pick.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="project-content">
+        <header class="project-header">
+            <h1>ANTI-CORONA</h1>
+            <a href="index.html" class="back-button">Home</a>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        </header>
+
+        <section class="project-gallery">
+            <div class="slider">
+                <img src="image/dyplom1.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/dyplom2.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/dyplom3.jpg" alt="Screenshot 3" class="slide">
+                <img src="image/dyplom4.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/dyplom5.jpg" alt="Screenshot 2" class="slide">
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>About the Game</h2>
+                    <p>Set in a world grappling with a viral outbreak, the game challenges players to strategically place medical buildings—such as pharmacies, hospitals, 
+                        and vaccine labs—to stop waves of viruses from reaching civilians. Each virus type presents different stats and behaviors, 
+                        while every building attacks using unique medical-themed projectiles like syringes, pills, and disinfectant bursts. The game blends strategy, progression, 
+                        and a light educational theme into a cohesive and accessible gameplay experience.</p>
+                </div>
+                <div class="image"><img src="image/dyplom2.jpg" alt="Game shot"></div>
+            </div>
+
+            <div class="project-section reverse">
+                <div class="text">
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>Unity – core engine for game development</li>
+                        <li>C# – scripting and gameplay logic</li>
+                        <li>Unity UI System – health bars, wave indicators, building menus</li>
+                        <li>Custom Tower Defense Framework – wave management, projectile logic, placement system</li>
+                        <li>Leonardo.AI & Adobe Photoshop – Used for generating and refining game artwork</li>
+                        <li>Manual Level Design – limited build spots and wave balancing</li>
+                    </ul>
+                </div>
+                <div class="image"><img src="image/dyplom3.jpg" alt="Game tech"></div>
+            </div>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>My Role</h2>
+                    <p>I was solely responsible for the full development of VirusDefense, from concept and design to implementation and testing. 
+                        I designed the entire gameplay loop, enemy and tower systems, wave logic, projectile mechanics, UI, and sound structure. 
+                        The project showcases my ability to build a complete, functional game independently, applying both programming and game design principles in Unity.</p>
+                </div>
+                <div class="image"><img src="image/dyplom4.jpg" alt="Game dev"></div>
+            </div>
+
+        <div class="project-link">
+            <a href="https://github.com/Vitalik0007/Dyploma_Project" target="_blank">See the Game</a>
+        </div>
+    </section>
+
+	<script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000);
+    
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

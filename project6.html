@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Project Title</title>
+	<link rel="stylesheet" href="css/project.css" />
+    <link rel="icon" href="image/pick.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="project-content">
+        <header class="project-header">
+            <h1>NANINOVEL TEST PROJECT</h1>
+            <a href="index.html" class="back-button">Home</a>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        </header>
+
+        <section class="project-gallery">
+            <div class="slider">
+                <img src="image/naninovel.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/naninovel2.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/naninovel3.jpg" alt="Screenshot 3" class="slide">
+                <img src="image/naninovel4.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/naninovel5.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/naninovel6.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/naninovel7.jpg" alt="Screenshot 2" class="slide">
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>About the Game</h2>
+                    <p>This project serves as a technical sandbox, demonstrating how to configure the engine, implement branching dialogue, 
+                        switch backgrounds and character sprites, and manage scenes using Naninovel’s scripting system. While not a full game, 
+                        it provided a strong foundation for understanding how to develop narrative-driven experiences in Unity.</p>
+                </div>
+                <div class="image"><img src="image/naninovel5.jpg" alt="Game shot"></div>
+            </div>
+
+            <div class="project-section reverse">
+                <div class="text">
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>Unity – game engine used for project structure and integration</li>
+                        <li>C# – custom scripting for UI and gameplay logic</li>
+                        <li>Naninovel – visual novel framework for dialogue, scenes, and scripting</li>
+                        <li>Unity UI System – integration of custom menus and interaction elements</li>
+                        <li>Text-based Scripting (Naninovel format) – for branching dialogue and scene control</li>
+                    </ul>
+                </div>
+                <div class="image"><img src="image/naninovel6.jpg" alt="Game tech"></div>
+            </div>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>My Role</h2>
+                    <p>I was fully responsible for setting up and experimenting with Naninovel in Unity. I handled engine configuration, created test scenes, 
+                        implemented custom scripts for branching logic and UI, and explored how to extend the system for potential future use in narrative games. 
+                        This project allowed me to quickly prototype ideas and gain practical experience with a specialized visual novel framework.</p>
+                </div>
+                <div class="image"><img src="image/naninovel4.jpg" alt="Game dev"></div>
+            </div>
+
+        <div class="project-link">
+            <a href="https://github.com/Vitalik0007/NaninovelUnity" target="_blank">See the Game</a>
+        </div>
+    </section>
+
+	<script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000);
+    
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

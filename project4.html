@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Project Title</title>
+	<link rel="stylesheet" href="css/project.css" />
+    <link rel="icon" href="image/pick.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="project-content">
+        <header class="project-header">
+            <h1>SLOTS GAME</h1>
+            <a href="index.html" class="back-button">Home</a>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        </header>
+
+        <section class="project-gallery">
+            <div class="slider">
+                <img src="image/SlotsGame.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/SlotsGame2.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/SlotsGame3.jpg" alt="Screenshot 3" class="slide">
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>About the Game</h2>
+                    <p>SlotsGame is a stylish and entertaining slot-machine-inspired game originally developed for a client.
+                        When the project was cancelled midway, I decided to complete and polish it as a personal project.</p>
+                </div>
+                <div class="image"><img src="image/SlotsGame.jpg" alt="Game shot"></div>
+            </div>
+
+            <div class="project-section reverse">
+                <div class="text">
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>Leonardo.AI & Photoshop</li>
+                        <li>Unity UI System</li>
+                    </ul>
+                </div>
+                <div class="image"><img src="image/SlotsGame2.jpg" alt="Game tech"></div>
+            </div>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>My Role</h2>
+                    <p>I was solely responsible for the entire development process — from implementing the slot machine logic and win detection system 
+                        to designing the UI and structuring a clean, maintainable C# architecture. 
+                        I focused on delivering polished gameplay mechanics and responsive user interaction.</p>
+                </div>
+                <div class="image"><img src="image/SlotsGame3.jpg" alt="Game dev"></div>
+            </div>
+
+        <div class="project-link">
+            <a href="https://github.com/Vitalik0007/SlotsGame" target="_blank">See the Game</a>
+        </div>
+    </section>
+
+	<script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000);
+    
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Project Title</title>
+	<link rel="stylesheet" href="css/project.css" />
+    <link rel="icon" href="image/pick.ico" type="image/x-icon">
+</head>
+<body>
+    <section class="project-content">
+        <header class="project-header">
+            <h1>DEATH ISLAND</h1>
+            <a href="index.html" class="back-button">Home</a>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        </header>
+
+        <section class="project-gallery">
+            <div class="slider">
+                <img src="image/deathIsland1.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/deathIsland2.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/deathIsland3.jpg" alt="Screenshot 3" class="slide">
+                <img src="image/deathIsland4.jpg" alt="Screenshot 1" class="slide active">
+                <img src="image/deathIsland5.jpg" alt="Screenshot 2" class="slide">
+                <img src="image/deathIsland6.jpg" alt="Screenshot 3" class="slide">
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>About the Game</h2>
+                    <p>Death Island is a fast-paced clicker game where players must defeat waves of enemies across 50 progressively challenging levels. 
+                        The core mechanic revolves around tapping enemies to deal damage, while gradually upgrading auto-click features, damage boosts, and other enhancements. 
+                        The game features a simple yet engaging progression system, in-game currency, and both rewarded ads and in-app purchases for monetization. 
+                        Designed with accessibility in mind, it offers intuitive gameplay and satisfying feedback loops.</p>
+                </div>
+                <div class="image"><img src="image/deathIsland1.jpg" alt="Game shot"></div>
+            </div>
+
+            <div class="project-section reverse">
+                <div class="text">
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>Unity - Game engine used for building the game, managing the core mechanics, and gameplay features.</li>
+                        <li>C# - Primary programming language used for scripting the game's logic and mechanics.</li>
+                        <li>Firebase - Used for user authentication and account management, enabling sign-ups and logins.</li>
+                        <li>Google Ads - Integrated for monetization through rewarded ads and ad placement.</li>
+                        <li>In-App Purchases (IAP) - Integrated for handling in-game purchases and currency transactions.</li>
+                        <li>Multilang Plugin - Used to add multiple languages, allowing the game to be localized for different audiences.</li>
+                        <li>Photoshop - For creating and editing 2D graphics used in the game.</li>
+                    </ul>
+                </div>
+                <div class="image"><img src="image/deathIsland5.jpg" alt="Game tech"></div>
+            </div>
+
+            <div class="project-section">
+                <div class="text">
+                    <h2>My Role</h2>
+                    <p>In Death Island, I was responsible for both gameplay programming and UI design, 
+                        primarily focusing on integrating Firebase for user authentication and managing player accounts. 
+                        I worked closely with a team to ensure smooth interaction between the game’s core mechanics and external services like Google Ads and In-App Purchases. 
+                        Additionally, I was in charge of configuring and implementing the UI, making sure it was user-friendly and intuitive. 
+                        I also collaborated with the artist to ensure the game’s visuals were integrated properly with the gameplay.</p>
+                </div>
+                <div class="image"><img src="image/deathIsland6.jpg" alt="Game dev"></div>
+            </div>
+
+        <!-- <div class="project-link">
+            <a href="https://play.google.com/store/apps/details?id=com.HotCrystal.DespotDrain" target="_blank">See the Game</a>
+        </div> -->
+    </section>
+
+	<script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000);
+    
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
